@@ -1,0 +1,23 @@
+services:
+  service:
+    build:
+      context: .
+    volumes:
+      - mariadb-data:/var/lib/mysql
+      - mariadb-config:/etc/mysql
+    ports:
+      - "3306:3306"
+  
+volumes:
+  mariadb-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./data
+  mariadb-config:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./config
