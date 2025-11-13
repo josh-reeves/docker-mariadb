@@ -1,5 +1,7 @@
 name: Create and publish a Docker image
-on: push # Controls when the workflow will run.
+on: 
+  push:
+    branches: ['release'] # Controls when the workflow will run.
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: josh-reeves/mariadb #For potential future use: ${{ github.repository }}
