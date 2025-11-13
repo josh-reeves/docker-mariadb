@@ -2,7 +2,7 @@ name: Create and publish a Docker image
 on: push # Controls when the workflow will run.
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: josh-reeves/mariadb-server #For potential future use: ${{ github.repository }}
+  IMAGE_NAME: josh-reeves/mariadb #For potential future use: ${{ github.repository }}
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
